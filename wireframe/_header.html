@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <script src="https://unpkg.com/wired-elements@latest/dist/wired-elements.bundled.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  Home page variants: 
+    <a href="index.html" target="_parent">Default</a> | 
+    <a href="index_voting.html" target="_parent">Voting</a>
+  <wired-card id="header">
+    <span>
+      <span style="padding-right: 50px;">
+        Alakajam!
+        <span style="position: relative">
+          <wired-button onclick="$('#mod-dropdown').toggle()">⚙️ v</wired-button>
+          <wired-listbox id="mod-dropdown" style="position: absolute; top: 70px; left: 0">
+              <wired-item>Mod dashboard</wired-item>
+              <wired-item>----</wired-item>
+              <wired-item>Edit featured event</wired-item>
+              <wired-item>Edit post</wired-item>
+          </wired-listbox>
+        </span>
+      </span>
+      <span style="padding-right: 50px;">
+        <wired-button>Events</wired-button>
+        <wired-button>Games</wired-button>
+        <wired-button>People</wired-button>
+        <wired-button>Chat</wired-button>
+        <wired-button>Docs</wired-button>
+      </span>
+      <span style="position: relative">
+        <wired-button onclick="$('#me-dropdown').toggle()">[Me] v</wired-button>
+        <wired-listbox id="me-dropdown" style="position: absolute; top: 70px; left: 0">
+            <wired-item>Dashboard</wired-item>
+            <wired-item>Public profile</wired-item>
+            <wired-item>----</wired-item>
+            <wired-item>My entries</wired-item>
+            <wired-item>My posts</wired-item>
+            <wired-item>My scores</wired-item>
+            <wired-item>----</wired-item>
+            <wired-item>Logout</wired-item>
+        </wired-listbox>
+      </span>
+    </span>
+  </wired-card>
+
+  <script>
+    $('#mod-dropdown').hide();
+    $('#me-dropdown').hide();
+  </script>
+</body>
+</html>

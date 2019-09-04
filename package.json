@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "global-tunnel": "^1.2.0",
-    "promisify-node": "^0.4.0"
+    "promisify-node": "^0.4.0",
+    "slug": "^0.9.1"
   }
 }
