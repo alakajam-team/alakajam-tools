@@ -11,6 +11,20 @@ iframe {
   border: 0;
 }
 
+.legend, .legend a {
+  font-size: 0.8rem;
+  color: #ddd;
+}
+.legend a:hover {
+  color: #000;
+}
+.legend {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+}
+
 span {
   display: inline-block;
 }
@@ -25,6 +39,9 @@ body {
 }
 .solid {
   background-color: white;
+}
+.gray {
+  background-color: #ddd;
 }
 
 #header {
