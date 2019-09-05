@@ -1,3 +1,12 @@
+<!--
+  TODOs Home page
+  - Consider turning the "call to action" into a plain non-clickable countdown, so that it doesn't scream for attention at the same time as the "my entry" actions.
+    But then, how to go to the game list? Maybe "my reviews" leads to the game page with a special header? Maybe we need to add a "browse entries" button that appears at some point?
+  - Think in advance of the UX for team building through exploring entries (created before the start of the event)
+  - "54 joined/35 entries" position is far from the "Join" button, there's something weird here. Maybe remove it and display the stats on the event home page only.
+  - Clicking the main announcement should probably display the event home page, not the blog post only
+-->
+
 <!doctype html>
 <html>
 <head>
@@ -8,60 +17,72 @@
 <body>
   <iframe style="width: 100%; height: 110px" src="header.html"></iframe>
 
-  <div style="max-width: 1400px; margin: -20px auto -3px auto; text-align: center">
-      <wired-button style="font-size: 0.7rem"><h4>Climate Change Jam</h4>99-99 August (Closed)</wired-button>
-      <wired-button style="font-size: 0.7rem" class="gray" style="width: 240px"><h4>nth Alakajam</h4>99-99 September</wired-button>
-      <wired-button style="font-size: 0.7rem"><h4>nth Kajam</h4>99-99 September (pending)</wired-button>
-      <wired-button style="font-size: 0.7rem; text-align: left"><h4>Browse full<br />schedule >>></h4></wired-button>
-  </div>
-
-  <wired-card class="striped" elevation=3 style="width: 100%">
-    <span style="float: left; color: #aaa">Event-specific<br />background texture</span>
-    <div style="max-width: 1400px; margin: 10px auto">
-      <span style="width: 64%; margin-right: 2%; vertical-align: top">
-        <wired-card class="solid" style="width: 100%; margin-bottom: 5px;">
-          <h4>Blog post <wired-icon-button>❤️</wired-icon-button> <wired-icon-button>💬</wired-icon-button></h4>
-          <wired-button style="float: right">[+] Expand</wired-button>
-          Posted 2 days ago by Administrator
+  <wired-card class="striped" elevation=3 style="width: 100%; margin-top: -20px; box-shadow: 3px 3px 8px rgba(0,0,0,0.2)">
+    <div style="max-width: 1400px; margin: 35px auto">
+    <span style="width: 65%; margin-right: 1%; vertical-align: top">
+      <span style="width: 160px">
+        <wired-card style="width: 100%; height: 160px" class="gray">nth Alakajam logo</wired-card>
+        <wired-card style="width: 100%; height: 80px; text-align: center" class="solid">
+          <h3>
+            54 joined<br />
+            35 entries
+          </h3>
         </wired-card>
-        
+      </span>
+      <span style="width: 730px">
         <wired-card class="solid" style="width: 100%">
-          <h4>>>>>> My entry <<<<<<</h4>
-          <wired-card style="width: 160px; height: 100px; font-size: 0.7rem; vertical-align: top" class="striped">
-            <div class="solid">
-              <h4 style="margin-top: 40px">Game XXX</h4>
-              by Username and friends
-            </div>
+          <wired-button style="float: right; margin-top: 90px">[+] Expand</wired-button>
+          <h4>Admin announcement <wired-icon-button>❤️</wired-icon-button> <wired-icon-button>💬</wired-icon-button></h4>
+          First paragraph of the post is visible by default, the rest can be open in place. Alternately we can give up on the whole "expand" thing and force people to really open the post like on Reddit, to bring readers closer to comments, read them, engage more...
+          
+        <wired-card class="solid" elevation=3 style="width: 100%; padding: 10px; margin: 5px 0">
+            <h1 style="float: right">00:00:00:00</h1>
+            <h2>Call to action</h2>
+            <b>Jam ends on September 99th</b>
           </wired-card>
-          <span style="padding-left: 10px">
-            <wired-button>Themes</wired-button><br />
-            <wired-button>Posts</wired-button><br />
-            <wired-button>Ratings</wired-button>
-          </span>
-          <span style="padding-left: 10px; color: orange">
-            <i>SO MUCH BLANK SPACE</i>
-          </span>
-        </wired-card>
-        <span style="margin-top: 5px; width: 100%">
-          <wired-button class="solid" style="width: 24%; margin-right: 1%; display: inline-block; margin-bottom: 5px">Rules & schedule</wired-button>
-          <wired-button class="solid" style="width: 24%; margin-right: 1%; display: inline-block; margin-bottom: 5px">Find a team</wired-button>
-          <wired-button class="solid" style="width: 24%; margin-right: 1%; display: inline-block">Resources</wired-button>
-          <wired-button class="solid" style="width: 23%; display: inline-block">Support</wired-button>
-        </span>
-      </span>
-
-      <span style="width: 33%; vertical-align: top;">
-        <wired-card style="width: 100%; height: 180px; float: left; margin-right: 20px;" class="gray">
-          nth Alakajam logo
-        </wired-card>
-        <wired-card class="solid" style="width: 100%">
-          <h2>Call to action</h2>
-          <h2>00:00:00:00</h2>
-          <b>Jam ends on September 99th</b>
         </wired-card>
       </span>
+    </span>
+    <span style="width: 33%; vertical-align: top;">
+      <wired-card class="solid" style="width: 100%; height: 170px">
+        <h3>My nth Alakajam entry</h3>
+        <wired-card style="width: 175px; height: 110px; float: left; font-size: 0.7rem; margin-right: 10px" class="gray">
+          <div class="solid">
+            <h4 style="margin-top: 60px">Game XXX</h4>
+            by Username and friends
+          </div>
+        </wired-card>
+        <wired-button class="solid" style="width: 50%; margin-bottom: 5px">My themes</wired-button>
+        <wired-button class="solid" style="width: 50%; margin-bottom: 5px">My reviews</wired-button>
+        <wired-button class="solid" style="width: 50%; margin-bottom: 5px">My blog posts</wired-button>
+      </wired-card>
+      <span style="margin-top: 5px; width: 100%">
+        <wired-button class="solid" style="width: 48%; margin-right: 1%; display: inline-block; margin-bottom: 5px">Rules & schedule</wired-button>
+        <wired-button class="solid" style="width: 48%; margin-right: 1%; display: inline-block; margin-bottom: 5px">Find a team</wired-button>
+        <wired-button class="solid" style="width: 48%; margin-right: 1%; display: inline-block">Resources</wired-button>
+        <wired-button class="solid" style="width: 48%; margin-right: 1%; display: inline-block">Support</wired-button>
+      </span>
+    </span>
     </div>
   </wired-card>
+
+  <div style="max-width: 1400px; margin: 3px auto -3px auto">
+    <span style="width: 65%; margin-right: 1%; vertical-align: top">
+      <wired-button style="font-size: 0.7rem; color: #555" class="solid"><h4>Climate Change Jam</h4>99-99 August (Closed)</wired-button>
+      <wired-button style="font-size: 0.7rem; width: 240px" class="gray"><h4>nth Alakajam</h4>99-99 September</wired-button>
+      <wired-button style="font-size: 0.7rem; color: #555" class="solid"><h4>nth Kajam</h4>99-99 September (pending)</wired-button>
+      <wired-button style="font-size: 0.7rem; color: #555; text-align: left" class="solid"><h4>Browse full<br />schedule...</h4></wired-button>
+    </span>
+    <span style="width: 33%; vertical-align: top; font-size: 3rem; text-align: right; margin-top: 10px">
+      <wired-icon-button class="solid">🐦</wired-icon-button>
+      <wired-icon-button class="solid">D</wired-icon-button>
+      <wired-icon-button class="solid">I</wired-icon-button>
+      <wired-icon-button class="solid">P</wired-icon-button>
+      <wired-icon-button class="solid">G</wired-icon-button>
+      <span style="font-size: 1rem">... (social links)</span>
+    </span>
+  </div>
+
   <div style="max-width: 1400px; margin: auto; margin-top: 20px;">
       <span style="width: 65%; margin-right: 1%; vertical-align: top">
         <wired-card style="width: 160px; height: 100px; float: left;" class="striped">Post thumbnail</wired-card>
@@ -111,16 +132,8 @@
         </div>
       </span>
       <span style="width: 33%; vertical-align: top;">
-        <span style="font-size: 3rem; margin-bottom: 10px">
-          <wired-icon-button class="solid">🐦</wired-icon-button>
-          <wired-icon-button class="solid">D</wired-icon-button>
-          <wired-icon-button class="solid">I</wired-icon-button>
-          <wired-icon-button class="solid">P</wired-icon-button>
-          <wired-icon-button class="solid">G</wired-icon-button>
-          <span style="font-size: 1rem">... (social links)</span>
-        </span>
         <wired-card style="width: 100%"">
-          <wired-card style="height: 160px" class="gray">
+          <wired-card style="height: 200px" class="striped">
             <h4>Livestream embed</h4>
             If any Alakajam-related stream is active, an embed pops up.
           </wired-card>
@@ -136,7 +149,13 @@
           New high score
         </wired-card>
         <wired-card style="width: 100%; height: 50px">
+          New user
+        </wired-card>
+        <wired-card style="width: 100%; height: 50px">
           New high score
+        </wired-card>
+        <wired-card style="width: 100%; height: 100px">
+          New comment
         </wired-card>
       </span>
   </div>
